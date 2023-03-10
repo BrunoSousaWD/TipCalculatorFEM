@@ -10,67 +10,70 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="images/logo.svg" alt="">
-        </div>
-        <div class="wrapper">
-            <div class="left-col">
-                <label for="num">Bill</label><br>
-                <div class="bill">
-                    <img src="images/icon-dollar.svg" alt="">
-                    <input type="number" id="bill-total" name="num" placeholder="0.00" maxlength="8" class="fs-input">
-                </div>
-
-                <label for="pecent">Select Tip %</label>
-                <div class="tip-percent">
-                    <input type="button" name="percent" value="5%" class="btn fs-input tip-p">
-                    <input type="button" name="percent" value="10%" class="btn fs-input tip-p">
-                    <input type="button" name="percent" value="15%" class="btn fs-input tip-p">
-                    <input type="button" name="percent" value="25%" class="btn fs-input tip-p">
-                    <input type="button" name="percent" value="50%" class="btn fs-input tip-p">
-                    <div class="c-btn">
-                        <input type="number" name="percent" placeholder="Custom" maxlength="2" id="custom"
+    <main>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.svg" alt="">
+            </div>
+            <div class="wrapper">
+                <div class="left-col">
+                    <label for="num">Bill</label><br>
+                    <div class="bill">
+                        <img src="images/icon-dollar.svg" alt="">
+                        <input type="number" id="bill-total" name="num" placeholder="0.00" maxlength="8"
                             class="fs-input">
                     </div>
 
+                    <label for="pecent">Select Tip %</label>
+                    <div class="tip-percent">
+                        <input type="button" name="percent" value="5%" class="btn fs-input tip-p">
+                        <input type="button" name="percent" value="10%" class="btn fs-input tip-p">
+                        <input type="button" name="percent" value="15%" class="btn fs-input tip-p">
+                        <input type="button" name="percent" value="25%" class="btn fs-input tip-p">
+                        <input type="button" name="percent" value="50%" class="btn fs-input tip-p">
+                        <div class="c-btn">
+                            <input type="number" name="percent" placeholder="Custom" maxlength="2" id="custom"
+                                class="fs-input">
+                        </div>
+
+                    </div>
+                    <!--Tip--percent end-->
+                    <label for="number-people" id="num-ppl-label">Number of People</label>
+                    <p id="error-message">Can't be zero</p>
+                    <div class="num-people">
+                        <img src="images/icon-person.svg" alt="">
+                        <input type="number" name="number-people" placeholder="0" id="numPeople" class="fs-input"
+                            min='1' maxlength='5' size="5" required>
+                    </div>
+                    <!--num-people End-->
                 </div>
-                <!--Tip--percent end-->
-                <label for="number-people" id="num-ppl-label">Number of People</label>
-                <p id="error-message">Can't be zero</p>
-                <div class="num-people">
-                    <img src="images/icon-person.svg" alt="">
-                    <input type="number" name="number-people" placeholder="0" id="numPeople" class="fs-input" min='1'
-                        maxlength='5' size="5" required>
-                </div>
-                <!--num-people End-->
+                <!--left-col end-->
+                <div class="right-col">
+                    <div class="display-amount">
+                        <div id="tip-amount" class="amount">
+                            <p>Tip Amount <br> <span>/ person</span></p>
+                            <div class="result" id="tip-result">$0.00</div>
+                        </div>
+                        <!--tip-amount End-->
+                        <div id="ppl-amount" class="amount">
+                            <p>Total <br> <span>/ person</span></p>
+                            <div class="result" id="ppl-result">$0.00</div>
+
+                        </div>
+                        <!--ppl-amount end-->
+                    </div>
+
+                    <button type="button" id="reset">Reset</button>
+                </div><!-- Right-col end-->
             </div>
-            <!--left-col end-->
-            <div class="right-col">
-                <div class="display-amount">
-                    <div id="tip-amount" class="amount">
-                        <p>Tip Amount <br> <span>/ person</span></p>
-                        <div class="result" id="tip-result">$0.00</div>
-                    </div>
-                    <!--tip-amount End-->
-                    <div id="ppl-amount" class="amount">
-                        <p>Total <br> <span>/ person</span></p>
-                        <div class="result" id="ppl-result">$0.00</div>
-
-                    </div>
-                    <!--ppl-amount end-->
-                </div>
-
-                <button type="button" id="reset">Reset</button>
-            </div><!-- Right-col end-->
+            <div class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+                Coded by <a href="#">deSousa</a>.
+            </div>
+            <!--wrapper end-->
         </div>
-        <div class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-            Coded by <a href="#">deSousa</a>.
-        </div>
-        <!--wrapper end-->
-    </div>
-    <!--container End-->
+    </main>
+
 
 
 
