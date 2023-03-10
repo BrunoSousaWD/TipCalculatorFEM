@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --body-bg: hsl(185, 41%, 84%);
+
+    --hover-clr: hsl(172, 67%, 45%);
+    --dark-cyan: hsl(183, 100%, 15%);
+
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+
+    --vlg-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+
+    --not-valid: rgba(209, 79, 59, 0.816);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+body {
+    max-width: 1440px;
+    min-width: 320px;
+    background-color: var(--body-bg);
+    font-family: 'Space Mono', monospace;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*** Utility ***/
+.fs-input {
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.dollar-icon {
+    padding-left: 25px;
+    background-image: url('images/icon-dollar.svg') no-repeat left;
+    background-size: 20px;
+}
+
+.btn {
+    padding: 10px 45px;
+    background: var(--dark-cyan);
+    color: var(--white);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--hover-clr);
+    color: var(--dark-cyan);
+}
+
+.c-btn {
+    border-radius: 7px;
+    background: var(--vlg-cyan);
+    border: 3px solid transparent;
+    color: var(--dark-grayish-cyan);
+    cursor: pointer;
+    max-width: 135px;
+    display: flex;
+    justify-content: center;
+
+}
+
+#custom {
+    max-width: 80%;
+    border: none;
+    outline: none;
+    background: inherit;
+    font-size: 24px;
+    font-weight: 700;
+    color: inherit;
+    text-align: right;
+    cursor: pointer;
+}
+
+#custom::placeholder {
+    text-align: center;
+}
+
+.c-btn:hover {
+    border: 3px solid var(--hover-clr);
+}
+
+input:focus-visible {
+    outline-color: var(--hover-clr);
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+::placeholder {
+    color: var(--dark-grayish-cyan);
+    opacity: 1;
+    font-weight: 700;
+}
+
+.red-border {
+    border: 3px solid var(--not-valid);
+}
+
+.not-valid-message {
+    display: block;
+}
+
+
+
+
+/*** Components ***/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+
+}
+
+.logo {
+    width: 100px;
+}
+
+.wrapper {
+    margin-top: 6em;
+    margin-bottom: 2rem;
+    background-color: var(--white);
+    padding: 35px;
+    border-radius: 1.5em;
+    max-width: 90%;
+    display: flex;
+    gap: 2.5em;
+    flex-wrap: wrap;
+    box-shadow: 0px 13px 29px 13px rgba(0, 0, 0, 0.17);
+    -webkit-box-shadow: 0px 13px 29px 13px rgba(0, 0, 0, 0.17);
+    -moz-box-shadow: 0px 13px 29px 13px rgba(0, 0, 0, 0.17);
+}
+
+.left-col,
+.right-col {
+    flex: 1;
+}
+
+.left-col label {
+    color: var(--dark-grayish-cyan);
+    font-weight: 700;
+    font-size: 1rem;
+
+}
+
+.bill {
+    margin-bottom: 3em;
+}
+
+.bill,
+.num-people {
+    width: 100%;
+    border-radius: 7px;
+    background: var(--vlg-cyan);
+    border: 2px solid var(--vlg-cyan);
+    padding: 10px 15px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.bill:hover,
+.num-people:hover {
+    border: 2px solid var(--hover-clr);
+}
+
+.bill img {
+    width: 13px;
+    height: 20px;
+}
+
+.bill>input,
+.num-people>input {
+    outline: none;
+    border: none;
+    background: inherit;
+    text-align: right;
+    font-weight: 700;
+    color: var(--dark-cyan);
+    width: 95%;
+    cursor: pointer;
+}
+
+.num-people img {
+    width: 15px;
+    height: 20px;
+}
+
+.error {
+    border: 2px solid var(--not-valid);
+}
+
+#error-message {
+    display: none;
+    color: var(--not-valid);
+    text-align: right;
+    font-weight: 700;
+    font-size: 1em;
+    width: 50%;
+    float: right;
+}
+
+.tip-percent {
+    margin-bottom: 3em;
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1em;
+}
+
+.tip-percent>label {
+    padding-bottom: 10px;
+}
+
+.active {
+    background: hsl(172, 70%, 51%);
+    color: inherit;
+}
+
+
+/*** Right **/
+.right-col {
+    background-color: var(--dark-cyan);
+    padding: 45px;
+    border-radius: 1em;
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.amount {
+    display: flex;
+    flex-direction: row;
+    gap: 6em;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: end;
+}
+
+
+.amount>p {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+
+.amount>p>span {
+    color: var(--grayish-cyan);
+    font-size: 15px;
+}
+
+#ppl-amount {
+    margin-top: 3em;
+}
+
+.result {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--hover-clr);
+
+}
+
+#reset {
+    color: var(--dark-cyan);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-block: 15px;
+    background-color: var(--hover-clr);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#reset:hover {
+    background-color: hsl(172, 70%, 51%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width:550px) {
+    .container {
+        height: auto;
+        display: block;
+        overflow-x: hidden;
+        margin-top: 3em;
+
+    }
+
+    .logo {
+        margin-inline: auto;
+    }
+
+    .wrapper {
+        display: block;
+        max-width: 100%;
+        margin-top: 40px;
+    }
+
+    .left-col label {
+        font-size: 0.85rem;
+    }
+
+    .bill {
+        margin-bottom: 2em;
+    }
+
+    .tip-percent {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 2em;
+    }
+
+    .right-col {
+        margin-top: 2em;
+        padding: 30px 20px 20px 20px;
+        width: 108%;
+        margin-left: -11px;
+    }
+
+    .amount {
+        gap: 4em;
+    }
+
+    .amount>p {
+        font-size: .85rem;
+    }
+
+    .amount>p>span {
+        font-size: .7rem;
+    }
+
+    .result {
+        font-size: 2rem;
+    }
+
+    #ppl-amount {
+        margin-top: 2em;
+    }
+
+    #reset {
+        margin-top: 2em;
+    }
+}
